@@ -6,8 +6,7 @@ module TorqueBox
       end
 
       def background(options = {})
-        # no-op
-        # todo: set a global option to run the method synchronously?
+        self
       end
 
       module ClassMethods
@@ -18,7 +17,16 @@ module TorqueBox
     end
 
     class MessageProcessor
-
+    end
+    
+    class Queue
+      def publish(*args)
+        # no-op
+      end
+      
+      def receive(*args)
+        # no-op
+      end
     end
   end
 end
