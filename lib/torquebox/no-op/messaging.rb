@@ -20,6 +20,9 @@ module TorqueBox
     end
     
     class Queue
+      def initialize(path)
+      end
+
       def publish(*args)
         # no-op
       end
